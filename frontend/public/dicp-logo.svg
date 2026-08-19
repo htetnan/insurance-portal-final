@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="DICP Insurance logo">
+  <defs>
+    <linearGradient id="g" x1="18" y1="12" x2="110" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+  <path d="M64 7 108 24v32c0 29-17.4 51.8-44 65C37.4 107.8 20 85 20 56V24L64 7Z" fill="url(#g)"/>
+  <path d="M64 19 96 31v25c0 21.8-11.8 39.4-32 51.3C43.8 95.4 32 77.8 32 56V31L64 19Z" fill="none" stroke="#fff" stroke-opacity=".92" stroke-width="5"/>
+  <path d="M47 65.5 58.2 77 82 50" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

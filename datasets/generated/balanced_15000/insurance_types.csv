@@ -1,0 +1,7 @@
+id,created_at,name,description,benefits,rules
+9001,2026-08-01 00:00:00,SYNTHETIC_LIFE,Synthetic life insurance data for development and model evaluation.,Synthetic coverage benefits; not a real insurance product.,Development and education use only.
+9002,2026-08-01 00:00:00,SYNTHETIC_HEALTH,Synthetic health insurance data for development and model evaluation.,Synthetic coverage benefits; not a real insurance product.,Development and education use only.
+9003,2026-08-01 00:00:00,SYNTHETIC_MOTOR,Synthetic motor insurance data for development and model evaluation.,Synthetic coverage benefits; not a real insurance product.,Development and education use only.
+9004,2026-08-01 00:00:00,SYNTHETIC_TRAVEL,Synthetic travel insurance data for development and model evaluation.,Synthetic coverage benefits; not a real insurance product.,Development and education use only.
+9005,2026-08-01 00:00:00,SYNTHETIC_PROPERTY,Synthetic property insurance data for development and model evaluation.,Synthetic coverage benefits; not a real insurance product.,Development and education use only.
+9006,2026-08-01 00:00:00,SYNTHETIC_PERSONAL_ACCIDENT,Synthetic personal_accident insurance data for development and model evaluation.,Synthetic coverage benefits; not a real insurance product.,Development and education use only.

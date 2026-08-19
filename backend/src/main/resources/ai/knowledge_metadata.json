@@ -1,0 +1,26 @@
+{
+  "total": 50000,
+  "distribution": {
+    "insurance": 25000,
+    "website": 15000,
+    "business": 10000
+  },
+  "languages": {
+    "en": 30028,
+    "my": 19972
+  },
+  "fields": [
+    "id",
+    "domain",
+    "category",
+    "intent",
+    "language",
+    "question",
+    "answer",
+    "keywords",
+    "source_type",
+    "route"
+  ],
+  "generated_for": "DICP Insurance Portal AI Assistant",
+  "method": "Curated topic templates + scenario variation for local RAG retrieval; not a claim of neural-network fine-tuning."
+}

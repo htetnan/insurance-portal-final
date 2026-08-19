@@ -1,0 +1,29 @@
+{
+  "synthetic": true,
+  "contains_real_personal_data": false,
+  "profile": "balanced",
+  "requested_size": 15000,
+  "random_seed": 20260812,
+  "history_start": "2021-09",
+  "history_end": "2026-08",
+  "counts": {
+    "insurance_types": 6,
+    "insurance_packages": 24,
+    "users": 2500,
+    "policy_applications": 3500,
+    "payments": 6000,
+    "claims": 1000,
+    "feedbacks": 750,
+    "notifications": 750,
+    "auto_check_logs": 500,
+    "salary_training": 500,
+    "revenue_monthly": 60
+  },
+  "business_database_total": 15000,
+  "notes": [
+    "All identities and transactions are fictional.",
+    "Synthetic user passwords are intentionally non-login placeholders.",
+    "Import synthetic_seed.sql only into a fresh development database.",
+    "Revenue aggregation keeps VERIFIED PREMIUM/RENEWAL payments and excludes CLAIM_PAYOUT records."
+  ]
+}

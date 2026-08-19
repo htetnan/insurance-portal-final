@@ -1,0 +1,25 @@
+# Environment and secrets
+.env
+**/.env
+!**/.env.example
+
+# Dependencies and build output
+node_modules/
+frontend/dist/
+backend/target/
+__pycache__/
+*.py[cod]
+.venv/
+
+# Runtime data
+.mysql/
+backend/uploads/
+output/
+tmp/
+*.log
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+

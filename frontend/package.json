@@ -1,0 +1,30 @@
+{
+  "name": "insurance-portal-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5000 --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "axios": "^1.6.7",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "i18next": "^23.10.0",
+    "i18next-browser-languagedetector": "^7.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^14.1.0",
+    "react-router-dom": "^6.22.3",
+    "react-toastify": "^10.0.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.2.0"
+  }
+}

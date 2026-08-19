@@ -1,0 +1,411 @@
+{
+  "model": {
+    "name": "linear_regression_time_series",
+    "version": "2.0",
+    "library": "scikit-learn",
+    "selected_candidate": "trend_lag",
+    "selection_metric": "holdout_mae",
+    "training_records": 60,
+    "evaluation_records": 6,
+    "features": [
+      "time_index",
+      "previous_month_revenue",
+      "rolling_3_month_average"
+    ],
+    "r_squared": 0.5181,
+    "training_r_squared": 0.4138,
+    "rmse": 525247.59,
+    "monthly_trend": 10621.1
+  },
+  "data_source": "synthetic_verified_premium_payments",
+  "currency": "MMK",
+  "preprocessing": {
+    "raw_records": 60,
+    "processed_records": 60,
+    "duplicates_merged": 0,
+    "missing_months_filled": 0,
+    "missing_months": [],
+    "outliers_detected": 0,
+    "outlier_months": [],
+    "outlier_policy": "reported_only_not_removed",
+    "steps": [
+      "validate_month_and_non_negative_revenue",
+      "aggregate_duplicate_months",
+      "sort_chronologically",
+      "fill_missing_months_with_zero",
+      "detect_iqr_outliers_without_removing_them",
+      "create_time_seasonal_and_lag_features"
+    ]
+  },
+  "evaluation": {
+    "method": "chronological_one_step_holdout",
+    "train_records": 54,
+    "test_records": 6,
+    "mae": 444191.4,
+    "rmse": 525247.59,
+    "r_squared": 0.5181,
+    "mape_percent": 24.38,
+    "baseline": "previous_month_revenue",
+    "baseline_mae": 809512.96,
+    "beats_baseline": true,
+    "holdout_results": [
+      {
+        "month": "2026-03",
+        "actual": 1880292.81,
+        "predicted": 1905600.86
+      },
+      {
+        "month": "2026-04",
+        "actual": 2658974.6,
+        "predicted": 2013850.47
+      },
+      {
+        "month": "2026-05",
+        "actual": 878250.98,
+        "predicted": 1311546.68
+      },
+      {
+        "month": "2026-06",
+        "actual": 1357396.7,
+        "predicted": 1804114.03
+      },
+      {
+        "month": "2026-07",
+        "actual": 2260308.99,
+        "predicted": 2042001.21
+      },
+      {
+        "month": "2026-08",
+        "actual": 3118524.65,
+        "predicted": 2222129.24
+      }
+    ],
+    "model_comparison": [
+      {
+        "name": "trend",
+        "features": [
+          "time_index"
+        ],
+        "mae": 691322.33,
+        "rmse": 794964.6,
+        "r_squared": -0.104
+      },
+      {
+        "name": "trend_seasonal",
+        "features": [
+          "time_index",
+          "month_sin",
+          "month_cos"
+        ],
+        "mae": 688886.06,
+        "rmse": 811278.83,
+        "r_squared": -0.1497
+      },
+      {
+        "name": "trend_lag",
+        "features": [
+          "time_index",
+          "previous_month_revenue",
+          "rolling_3_month_average"
+        ],
+        "mae": 444191.4,
+        "rmse": 525247.59,
+        "r_squared": 0.5181
+      },
+      {
+        "name": "trend_seasonal_lag",
+        "features": [
+          "time_index",
+          "month_sin",
+          "month_cos",
+          "previous_month_revenue",
+          "rolling_3_month_average"
+        ],
+        "mae": 462631.52,
+        "rmse": 539043.71,
+        "r_squared": 0.4924
+      }
+    ]
+  },
+  "history": [
+    {
+      "month": "2021-09",
+      "revenue": 645766.79
+    },
+    {
+      "month": "2021-10",
+      "revenue": 863453.71
+    },
+    {
+      "month": "2021-11",
+      "revenue": 1292867.96
+    },
+    {
+      "month": "2021-12",
+      "revenue": 2080793.49
+    },
+    {
+      "month": "2022-01",
+      "revenue": 866988.41
+    },
+    {
+      "month": "2022-02",
+      "revenue": 1518569.12
+    },
+    {
+      "month": "2022-03",
+      "revenue": 1486585.13
+    },
+    {
+      "month": "2022-04",
+      "revenue": 2038367.93
+    },
+    {
+      "month": "2022-05",
+      "revenue": 642508.22
+    },
+    {
+      "month": "2022-06",
+      "revenue": 1410864.69
+    },
+    {
+      "month": "2022-07",
+      "revenue": 1643009.69
+    },
+    {
+      "month": "2022-08",
+      "revenue": 2252181.21
+    },
+    {
+      "month": "2022-09",
+      "revenue": 675142.8
+    },
+    {
+      "month": "2022-10",
+      "revenue": 1095470.13
+    },
+    {
+      "month": "2022-11",
+      "revenue": 1301471.29
+    },
+    {
+      "month": "2022-12",
+      "revenue": 1923121.96
+    },
+    {
+      "month": "2023-01",
+      "revenue": 822393.73
+    },
+    {
+      "month": "2023-02",
+      "revenue": 1720881.03
+    },
+    {
+      "month": "2023-03",
+      "revenue": 1570872.76
+    },
+    {
+      "month": "2023-04",
+      "revenue": 2658732.35
+    },
+    {
+      "month": "2023-05",
+      "revenue": 722397.06
+    },
+    {
+      "month": "2023-06",
+      "revenue": 1111456.98
+    },
+    {
+      "month": "2023-07",
+      "revenue": 1721012.74
+    },
+    {
+      "month": "2023-08",
+      "revenue": 2414661.85
+    },
+    {
+      "month": "2023-09",
+      "revenue": 667845.29
+    },
+    {
+      "month": "2023-10",
+      "revenue": 1206782.2
+    },
+    {
+      "month": "2023-11",
+      "revenue": 1600812.73
+    },
+    {
+      "month": "2023-12",
+      "revenue": 2098115.87
+    },
+    {
+      "month": "2024-01",
+      "revenue": 886428.79
+    },
+    {
+      "month": "2024-02",
+      "revenue": 1646920.52
+    },
+    {
+      "month": "2024-03",
+      "revenue": 1588255.14
+    },
+    {
+      "month": "2024-04",
+      "revenue": 2406065.37
+    },
+    {
+      "month": "2024-05",
+      "revenue": 771595.49
+    },
+    {
+      "month": "2024-06",
+      "revenue": 1534115.21
+    },
+    {
+      "month": "2024-07",
+      "revenue": 2035793.37
+    },
+    {
+      "month": "2024-08",
+      "revenue": 2652239.03
+    },
+    {
+      "month": "2024-09",
+      "revenue": 741342.19
+    },
+    {
+      "month": "2024-10",
+      "revenue": 1281567.9
+    },
+    {
+      "month": "2024-11",
+      "revenue": 1569633.29
+    },
+    {
+      "month": "2024-12",
+      "revenue": 2107619.29
+    },
+    {
+      "month": "2025-01",
+      "revenue": 987633.97
+    },
+    {
+      "month": "2025-02",
+      "revenue": 1526706.59
+    },
+    {
+      "month": "2025-03",
+      "revenue": 1667851.7
+    },
+    {
+      "month": "2025-04",
+      "revenue": 2887970.3
+    },
+    {
+      "month": "2025-05",
+      "revenue": 868530.61
+    },
+    {
+      "month": "2025-06",
+      "revenue": 1416252.0
+    },
+    {
+      "month": "2025-07",
+      "revenue": 1938342.36
+    },
+    {
+      "month": "2025-08",
+      "revenue": 2958003.06
+    },
+    {
+      "month": "2025-09",
+      "revenue": 710225.91
+    },
+    {
+      "month": "2025-10",
+      "revenue": 1390233.51
+    },
+    {
+      "month": "2025-11",
+      "revenue": 1611310.74
+    },
+    {
+      "month": "2025-12",
+      "revenue": 2081664.43
+    },
+    {
+      "month": "2026-01",
+      "revenue": 970301.65
+    },
+    {
+      "month": "2026-02",
+      "revenue": 1937691.48
+    },
+    {
+      "month": "2026-03",
+      "revenue": 1880292.81
+    },
+    {
+      "month": "2026-04",
+      "revenue": 2658974.6
+    },
+    {
+      "month": "2026-05",
+      "revenue": 878250.98
+    },
+    {
+      "month": "2026-06",
+      "revenue": 1357396.7
+    },
+    {
+      "month": "2026-07",
+      "revenue": 2260308.99
+    },
+    {
+      "month": "2026-08",
+      "revenue": 3118524.65
+    }
+  ],
+  "predictions": [
+    {
+      "month": "2026-09",
+      "predicted_revenue": 1326670.76,
+      "lower_bound": 297185.49,
+      "upper_bound": 2356156.04
+    },
+    {
+      "month": "2026-10",
+      "predicted_revenue": 1289811.11,
+      "lower_bound": 260325.83,
+      "upper_bound": 2319296.38
+    },
+    {
+      "month": "2026-11",
+      "predicted_revenue": 1790116.43,
+      "lower_bound": 760631.16,
+      "upper_bound": 2819601.71
+    },
+    {
+      "month": "2026-12",
+      "predicted_revenue": 2489350.8,
+      "lower_bound": 1459865.53,
+      "upper_bound": 3518836.08
+    },
+    {
+      "month": "2027-01",
+      "predicted_revenue": 1973540.61,
+      "lower_bound": 944055.33,
+      "upper_bound": 3003025.89
+    },
+    {
+      "month": "2027-02",
+      "predicted_revenue": 1640679.37,
+      "lower_bound": 611194.1,
+      "upper_bound": 2670164.65
+    }
+  ],
+  "disclaimer": "Revenue predictions are planning estimates based only on historical verified premium payments. They must not be used to approve or reject an individual policy or claim."
+}

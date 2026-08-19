@@ -1,0 +1,12 @@
+- [Security decisions](security-decisions.md) — Key auth/security patterns; JWT, CORS, admin bootstrap, IDOR, file upload rules
+- [Self-managed background service (MySQL)](local-service-in-workflow.md) — start it inside the workflow's script, not via ShellExec nohup/disown, or it dies between tool calls
+- [One-shot effects under React.StrictMode](react-strictmode-oneshot-effects.md) — a token-consuming useEffect can silently show a false "failed" state on its StrictMode double-invoke; guard with a ref
+- [Protected file serving via blob fetch](protected-file-serving.md) — JWT-protected file endpoints; frontend must use axios blob fetch + object URLs, never plain <img src>
+- [JSON array in TEXT column for multi-file paths](json-array-in-text-column.md) — FileStorageUtil toJsonArray/fromJsonArray; documentCount derived at DTO level from list size
+- [Dynamic form system architecture](dynamic-form-system.md) — form_templates→package FK, form_data JSON in applications/claims, FormDetailModal, PDF via itext7
+- [React button type mutation triggers phantom submit](react-button-type-mutation-submit.md) — toggle button changing type button→submit at same JSX position can self-submit on the toggling click; fix with distinct Fragment keys
+- [Premium installment schedule system](premium-schedule-system.md) — dynamic schedule from app+package data; Payment.periodNumber tracks which installment is paid; PremiumScheduleUtil shared by both endpoints
+- [iText7 bilingual PDF without Myanmar font](itext7-bilingual-pdf.md) — StandardFonts (Helvetica) are Latin-only; Myanmar Unicode must be embedded TTF; pragmatic fallback: English primary + Myanmar romanized labels in parentheses
+- [Insurance type details + AI chat architecture](insurance-type-details-and-chat.md) — InsuranceType has description/benefits/rules; AI chat at /ai/chat needs XAI_API_KEY; payment needs last-6-digits + amount
+- [MySQL and file storage](mysql-and-file-storage.md) — Keep business records in MySQL and uploaded binaries in persistent protected storage with MySQL references
+- [Digital signature workflow](digital-signature-workflow.md) — Customer, agent, and admin signatures are separate, validated, reset on revision, and rendered in PDFs
